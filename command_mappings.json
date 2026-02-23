@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "firefox": "firefox",
+        "terminal": "gnome-terminal",
+        "calculator": "gnome-calculator",
+        "files": "nautilus",
+        "settings": "gnome-control-center"
+    },
+    "system": {
+        "shutdown": "shutdown now",
+        "restart": "reboot",
+        "lock": "gnome-screensaver-command -l"
+    }
+}
