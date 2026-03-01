@@ -255,14 +255,14 @@ class VoiceAssistant:
         try:
             # First, check for and remove faulty repositories
             subprocess.run(
-                "sudo add-apt-repository --remove 'https://cli.github.com/packages'",
+                "pkexec add-apt-repository -y --remove 'https://cli.github.com/packages'",
                 shell=True,
                 check=False  # Don't fail if it doesn't exist
             )
             
             # Perform the update
             process = subprocess.run(
-                "sudo apt update -y",
+                "pkexec apt update -y",
                 shell=True,
                 check=True,
                 text=True,
@@ -283,7 +283,7 @@ class VoiceAssistant:
         speak(response)
         try:
             process = subprocess.run(
-                "sudo apt upgrade -y",
+                "pkexec apt upgrade -y",
                 shell=True,
                 check=True,
                 text=True,
@@ -304,7 +304,7 @@ class VoiceAssistant:
         speak(response)
         try:
             process = subprocess.run(
-                "sudo apt autoremove -y",
+                "pkexec apt autoremove -y",
                 shell=True,
                 check=True,
                 text=True,
