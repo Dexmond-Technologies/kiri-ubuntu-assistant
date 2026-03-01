@@ -262,7 +262,7 @@ class VoiceAssistant:
             
             # Perform the update
             process = subprocess.run(
-                "echo 'Dadsaf31!' | sudo -S apt update -y",
+                "sudo apt update -y",
                 shell=True,
                 check=True,
                 text=True,
@@ -283,7 +283,7 @@ class VoiceAssistant:
         speak(response)
         try:
             process = subprocess.run(
-                "echo 'Dadsaf31!' | sudo -S apt upgrade -y",
+                "sudo apt upgrade -y",
                 shell=True,
                 check=True,
                 text=True,
@@ -304,7 +304,7 @@ class VoiceAssistant:
         speak(response)
         try:
             process = subprocess.run(
-                "echo 'Dadsaf31!' | sudo -S apt autoremove -y",
+                "sudo apt autoremove -y",
                 shell=True,
                 check=True,
                 text=True,
